@@ -2,8 +2,8 @@ import { CategoriesRepository } from "../../repositories/implementations/Categor
 import { CreateCategoryController } from "./CreateCategoryController";
 import { CreateCategoryUseCase } from "./CreateCategoryUseCase";
 
-const catergoriesRepo = new CategoriesRepository();
-const createCategoryUseCase = new CreateCategoryUseCase(catergoriesRepo);
+const categoriesRepository = CategoriesRepository.getInstance();
+const createCategoryUseCase = new CreateCategoryUseCase(categoriesRepository);
 
 const createCategoryController = new CreateCategoryController(
   createCategoryUseCase
